@@ -1,0 +1,26 @@
+{
+  "name": "denverbot",
+  "version": "1.0.0",
+  "description": "Un bot discord multifonctions",
+  "main": "shard.js",
+  "scripts": {
+    "test": "node shard.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/denverbot/DenverBot.git"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "discord-bot",
+    "denver",
+    "denverbot"
+  ],
+  "author": "Denver",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/denverbot/DenverBot/issues"
+  },
+  "homepage": "https://github.com/denverbot/DenverBot#readme"
+}
