@@ -4,7 +4,11 @@ module.exports = class {
 
             NO_DESCRIPTION_PROVIDED: "Aucune description définie",
             NO_USAGE_PROVIDED: "Aucun usage défini",
-            NO_EXAMPLES_PROVIDED: "Aucun exemple défini"
+            NO_EXAMPLES_PROVIDED: "Aucun exemple défini",
+
+            PING_DESCRIPTION: "Répond juste pong",
+            PING_USAGE: (prefix) => `${prefix}ping`,
+            PING_PONG: "Pong !"
 
         }
     }
