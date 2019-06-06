@@ -6,8 +6,8 @@ class Ping extends Command {
         super(client, {
             name: "ping",
             description: (language) => language.get("PING_DESCRIPTION"),
-            usage: (language) => language.get("PING_USAGE"),
-            examples: (language) => language.get("PING_EXAMPLES"),
+            usage: (language, prefix) => language.get("PING_USAGE", prefix),
+            examples: (language, prefix) => language.get("PING_EXAMPLES", prefix),
             dirname: __dirname,
             enabled: true,
             guildOnly: false,
