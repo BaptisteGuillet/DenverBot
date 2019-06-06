@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/denverbot/DenverBot/issues"
   },
-  "homepage": "https://github.com/denverbot/DenverBot#readme"
+  "homepage": "https://github.com/denverbot/DenverBot#readme",
+  "dependencies": {
+    "discord.js": "github:discordjs/discord.js#405bdb5b558eff478d0bde739cee1ee8e40c330b"
+  }
 }
