@@ -1,20 +1,24 @@
 const Command = require("../../base/Command.js"),
-Discord = require('discord.js');
+Discord = require("discord.js");
 
-class Help extends Command {
+class Ping extends Command {
     constructor (client) {
         super(client, {
-            name: "help",
-            description: "Affiche la liste des commandes !",
-            dirname: __dirname,
-            usage: "help",
-            enabled: true,
-            aliases: ["aide"],
-            permission: false,
-            botpermissions: [ "SEND_MESSAGES", "EMBED_LINKS" ],
-            examples: "$help",
-            owner: false,
-            cooldown: 2000
+            name = "ping",
+            description = languages.get("PING_DESCRIPTION"),
+            usage = languages.get("PING_USAGE"),
+            examples = languages.get("PING_EXAMPLES"),
+            dirname = __dirname,
+            enabled = true,
+            guildOnly = false,
+            aliases = [
+                "pong"
+            ],
+            memberPermissions = [],
+            botPermissions = [],
+            nsfw = false,
+            adminOnly = false,
+            cooldown = 1000
         });
     }
 
@@ -24,4 +28,4 @@ class Help extends Command {
 
 }
 
-module.exports = Help;
+module.exports = Ping;

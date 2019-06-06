@@ -8,6 +8,7 @@ module.exports = class {
 
             PING_DESCRIPTION: "Répond juste pong",
             PING_USAGE: (prefix) => `${prefix}ping`,
+            PING_EXAMPLES: (prefix) => `${prefix}ping`,
             PING_PONG: "Pong !"
 
         }
