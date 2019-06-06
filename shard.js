@@ -7,4 +7,4 @@ const shard = new Discord.ShardingManager("./denver.js", {
 
 shard.spawn(2);
 
-shard.on("launch", (shard) => console.log(`[SHARD] Shard ${shard.id}/${shard.totalShards}`));
+shard.on("shardCreate", (shard) => console.log(`[SHARD] Shard ${shard.id}/${shard.manager.totalShards}`));
