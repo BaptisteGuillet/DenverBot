@@ -22,8 +22,12 @@ module.exports = class {
 		INVITE_USAGE: (prefix) => `${prefix}invite`,
 		INVITE_EXAMPLES: (prefix) => `${prefix}invite`,
 		INVITE_FIELD: "Invitation",
-		INVITE: "[Click-here](https://discordapp.com/oauth2/authorize?client_id=390231727554953216&scope=bot&permissions=66321471) to invite the bot to your discord server."
+		INVITE: "[Click-here](https://discordapp.com/oauth2/authorize?client_id=390231727554953216&scope=bot&permissions=66321471) to invite the bot to your discord server.",
 		
+		AVATAR_DESCRIPTION: "Gives the avatar of the requested user",
+		AVATAR_USAGE: (prefix) => `${prefix}avatar [@user]`,
+		AVATAR_EXAMPLES: (prefix) => `${prefix}avatar @Skiz`,
+		AVATAR_TITLE: "Avatar of"
 
 
         };
