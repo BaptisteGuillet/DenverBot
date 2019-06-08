@@ -14,7 +14,7 @@ class Ping extends Command {
             aliases: [
                 "pong"
             ],
-            memberPermissions: [],
+            permLevel: "User",
             botPermissions: [],
             nsfw: false,
             adminOnly: false,
@@ -22,7 +22,7 @@ class Ping extends Command {
         });
     }
 
-    async run (message, args, data) {
+    async run (message, args) {
         message.channel.send(message.language.get("PING_PONG"));
     }
 }
