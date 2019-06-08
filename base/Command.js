@@ -11,7 +11,7 @@ module.exports = class Command {
         enabled = true,
         guildOnly = false,
         aliases = new Array(),
-        memberPermissions = new Array(),
+        permLevel = "User",
         botPermissions = new Array(),
         nsfw = false,
         adminOnly = false,
@@ -20,7 +20,7 @@ module.exports = class Command {
     {
         let category = (dirname ? dirname.split("/")[parseInt(dirname.split("/").length-1, 10)] : "Other");
         this.client = client;
-        this.conf = { enabled, guildOnly, aliases, memberPermissions, botPermissions, nsfw, adminOnly, cooldown };
+        this.conf = { enabled, guildOnly, aliases, botPermissions, nsfw, adminOnly, cooldown, permLevel };
         this.help = { name, description, category, usage, examples };
     }
 };

@@ -15,7 +15,24 @@ class Denver extends Client {
         this.aliases = new Collection(); // Creates new command aliases collection
         this.wait = promisify(setTimeout); // client.wait(1000) - Wait 1 second
         this.functions = require("./utils/functions.js"); // Load the functions file
-        this.logger = require("./utils/logger.js");
+        this.logger = require("./utils/logger.js"); // Load logger file
+        this.error = require("./utils/errors.js"); // Load errors file
+    }
+
+    getLevel (message) {
+        let permlvl = 0;
+        const permOrder = this.config.permLevels.slice(0).sort((p, c) => p.level < c.level ? 1 : -1);
+        while (permOrder.length) {
+            const currentLevel = permOrder.shift();
+            if(message.guild && currentLevel.guildOnly){
+                continue;
+            }
+            if(currentLevel.check(message)) {
+                permlvl = currentLevel.level;
+                break;
+            }
+        }
+        return permlvl;
     }
 
     // This function is used to load a command and add it to the collection
@@ -67,9 +84,10 @@ const init = async () => {
         useNewUrlParser: true
     });
 
+    client.models = {};
     client.models.Guild = mongoose.model("guild", new mongoose.Schema({
         id: {type: String},
-        language: {type: String, default: "english"},
+        language: {type: String, default: client.config.defaultLanguage},
         prefix: {type: String, default: client.config.prefix}
     }));
 
@@ -101,6 +119,13 @@ const init = async () => {
         delete require.cache[require.resolve(`./events/${file}`)];
     });
 
+    // Gets commands permission
+    client.levelCache = {};
+    for (let i = 0; i < client.config.permLevels.length; i++) {
+        const thisLevel = client.config.permLevels[i];
+        client.levelCache[thisLevel.name] = thisLevel.level;
+    }
+    
     client.login(client.config.token); // Log in to the discord api
 
 };
