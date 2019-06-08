@@ -37,7 +37,7 @@ module.exports = {
      * @returns The prefix
      */
     getPrefix(message){
-        if(message.settings.prefix.length > 0){
+        if(message.channel.type !== "dm"){
             const prefixes = [
                 `<@${message.client.user.id}>`,
                 "Denver",
@@ -51,7 +51,7 @@ module.exports = {
             });
             return prefix;
         } else {
-            return "";
+            return true;
         }
     }
 };

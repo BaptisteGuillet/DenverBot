@@ -32,12 +32,12 @@ module.exports = class {
             return message.channel.send(language.get("PREFIX_INFO", settings.prefix));
         }
 
-        let prefix = await client.functions.getPrefix(message);
+        let prefix = client.functions.getPrefix(message);
         if(!prefix){
             return;
         }
-        
-        let args = message.content.slice(prefix.length).trim().split(/ +/g);
+
+        let args = message.content.slice((typeof prefix === "string" ? prefix.length : 0)).trim().split(/ +/g);
         let command = args.shift().toLowerCase();
         let cmd = client.commands.get(command) || client.commands.get(client.aliases.get(command));
         if(!cmd){
