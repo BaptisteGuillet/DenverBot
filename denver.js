@@ -16,7 +16,7 @@ class Denver extends Client {
         this.wait = promisify(setTimeout); // client.wait(1000) - Wait 1 second
         this.functions = require("./utils/functions.js"); // Load the functions file
         this.logger = require("./utils/logger.js"); // Load logger file
-        this.error = require("./utils/errors.js"); // Load errors file
+        this.errors = require("./utils/errors.js"); // Load errors file
     }
 
     getLevel (message) {

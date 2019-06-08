@@ -49,7 +49,7 @@ module.exports = class {
         }
 
         if(permLevel < client.levelCache[cmd.conf.permLevel]) {
-            return client.errors.perm(client.config.permLevels.find((l) => l.level === permLevel).name, client.levelCache[cmd.conf.permLevel], message);
+            return client.errors.perm(client.config.permLevels.find((l) => l.level === permLevel).name, cmd.conf.permLevel, message);
         }
 
         cmd.run(message, args);

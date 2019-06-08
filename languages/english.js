@@ -11,7 +11,7 @@ module.exports = class {
             NO_EXAMPLES_PROVIDED: "No example defined",
 
 			ERROR_PERMISSIONS_TITLE: `${e.error} Insufficient permissions`,
-			ERROR_PERMISSIONS_CONTENT: (lvl, rlvl) => `This permission requires the permission level \`${rlvl}\` and you only have the level \`${lvl}\` !`,
+			ERROR_PERMISSIONS_CONTENT: (lvl, rlvl) => `This command requires the permission level \`${rlvl}\` and you only have the level \`${lvl}\` !`,
 
 			ERROR_COMMAND_GUILDONLY: `${e.error} | This command is unavailable in private messages!`,
 
