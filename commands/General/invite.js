@@ -25,7 +25,7 @@ class Invite extends Command {
     async run (message, args) {
         var info = new Discord.MessageEmbed()
         .setColor(message.config.embed.color)
-        .addField("Invitation", `${message.language.get("INVITE")}`)
+        .addField(message.language.get("INVITE_FIELD"), `${message.language.get("INVITE")}`)
         message.channel.send(info)
     }
 }
