@@ -18,7 +18,12 @@ module.exports = class {
 			PING_DESCRIPTION: "Risponderà solo \"pong\"",
 			PING_USAGE: (prefix) => `${prefix}ping`,
 			PING_EXAMPLES: (prefix) => `${prefix}ping`,
-			PING_PONG: "Pong !"
+			PING_PONG: "Pong !"?
+
+			INVITE_DESCRIPTION: "Dà l'invito ad aggiungere il bot su un server",
+			INVITE_USAGE: (prefix) => `${prefix}invite`,
+			INVITE_EXAMPLES: (prefix) => `${prefix}invite`,
+			INVITE: "[Clicca qui] (https://discordapp.com/oauth2/authorize?client_id=390231727554755495323216&scope=bot&permissions=66321471) per invitare il bot al tuo server di discordia."
 
         }
     }
