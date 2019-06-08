@@ -6,9 +6,9 @@ module.exports = class {
 
 			PREFIX_INFO: (prefix) => `${prefix.length > 0 ? `${e.info} | My prefix on this server is \`${prefix}\` !` : `${e.info} | No prefix. Simply type the command without prefix !`}`,
 
-            NO_DESCRIPTION_PROVIDED: "No description defined",
-            NO_USAGE_PROVIDED: "No defined use",
-            NO_EXAMPLES_PROVIDED: "No example defined",
+			NO_DESCRIPTION_PROVIDED: "No description defined",
+			NO_USAGE_PROVIDED: "No defined use",
+			NO_EXAMPLES_PROVIDED: "No example defined",
 
 			ERROR_PERMISSIONS_TITLE: `${e.error} Insufficient permissions`,
 			ERROR_PERMISSIONS_CONTENT: (lvl, rlvl) => `This command requires the permission level \`${rlvl}\` and you only have the level \`${lvl}\` !`,
@@ -25,6 +25,7 @@ module.exports = class {
 			PING_EXAMPLES: (prefix) => `${prefix}invite`,
 			INVITE: "[Click here] (https://discordapp.com/oauth2/authorize?client_id=390231727554953216&scope=bot&permissions=66321471) to invite the bot to your discord server."
 		
+
 
         };
     }
