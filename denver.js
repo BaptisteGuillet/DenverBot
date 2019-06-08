@@ -2,6 +2,7 @@ const { Client, Collection, MessageEmbed } = require("discord.js");
 const { promisify } = require("util"),
 fs = require("fs"),
 path = require("path"),
+mongoose = require("mongoose"),
 readdir = promisify(fs.readdir);
 
 // Creates new Denver class
@@ -60,6 +61,21 @@ class Denver extends Client {
 const client = new Denver();
 
 const init = async () => {
+
+    // Connect to the database
+    await mongoose.connect("mongodb://localhost:27017/denverbot", {
+        useNewUrlParser: true
+    });
+
+    client.models.Guild = mongoose.model("guild", new mongoose.Schema({
+        id: {type: String},
+        language: {type: String, default: "english"},
+        prefix: {type: String, default: client.config.prefix}
+    }));
+
+    client.models.User = mongoose.model("user", new mongoose.Schema({
+        id: {type: String}
+    }));
 
     // Search for all commands
     let directories = await readdir("./commands/");
