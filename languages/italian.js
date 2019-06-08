@@ -15,10 +15,10 @@ module.exports = class {
 
 			ERROR_COMMAND_GUILDONLY: `${e.error} | Questo comando non è disponibile nei messaggi diretti !`,
 
-            PING_DESCRIPTION: "Risponderà solo "pong"",
-            PING_USAGE: (prefix) => `${prefix}ping`,
-            PING_EXAMPLES: (prefix) => `${prefix}ping`,
-            PING_PONG: "Pong !"
+			PING_DESCRIPTION: "Risponderà solo \"pong\"",
+			PING_USAGE: (prefix) => `${prefix}ping`,
+			PING_EXAMPLES: (prefix) => `${prefix}ping`,
+			PING_PONG: "Pong !"
 
         }
     }
