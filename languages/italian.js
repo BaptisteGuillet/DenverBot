@@ -22,7 +22,7 @@ module.exports = class {
 			INVITE_USAGE: (prefix) => `${prefix}invite`,
 			INVITE_EXAMPLES: (prefix) => `${prefix}invite`,
 			INVITE_FIELD: "Invito",
-			INVITE: "[Clicca qui] (https://discordapp.com/oauth2/authorize?client_id=390231727554755495323216&scope=bot&permissions=66321471) per invitare il bot al tuo server di discordia."
+			INVITE: "[Clicca-qui](https://discordapp.com/oauth2/authorize?client_id=390231727554755495323216&scope=bot&permissions=66321471) per invitare il bot al tuo server di discordia."
 
         }
     }
