@@ -122,7 +122,7 @@ const init = async () => {
     // Gets commands permission
     client.levelCache = {};
     for (let i = 0; i < client.config.permLevels.length; i++) {
-        const thisLevel = client.config.permLevels[i];
+        const thisLevel = client.config.permLevels[parseIn(i, 10)];
         client.levelCache[thisLevel.name] = thisLevel.level;
     }
     

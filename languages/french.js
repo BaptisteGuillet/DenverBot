@@ -20,7 +20,7 @@ module.exports = class {
             PING_EXAMPLES: (prefix) => `${prefix}ping`,
             PING_PONG: "Pong !"
 
-        }
+        };
     }
     /**
 	 * The method to get language strings

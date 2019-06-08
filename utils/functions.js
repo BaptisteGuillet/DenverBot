@@ -16,7 +16,7 @@ module.exports = {
                         resolve(result[0]);
                     } else {
                         let guild = new client.models.Guild({
-                            id: message.guild.id
+                            id: channel.guild.id
                         });
                         guild.save();
                         resolve(guild);
