@@ -17,10 +17,11 @@ module.exports = class {
 		PING_USAGE: (prefix) => `${prefix}ping`,
 		PING_EXAMPLES: (prefix) => `${prefix}ping`,
 		PING_PONG: "Pong !",	
-			
+
 		INVITE_DESCRIPTION: "Gives the invitation to add the bot on a server",
 		INVITE_USAGE: (prefix) => `${prefix}invite`,
 		INVITE_EXAMPLES: (prefix) => `${prefix}invite`,
+		INVITE_FIELD: "Invitation",
 		INVITE: "[Click here] (https://discordapp.com/oauth2/authorize?client_id=390231727554953216&scope=bot&permissions=66321471) to invite the bot to your discord server."
 		
 
