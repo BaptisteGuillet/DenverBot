@@ -23,10 +23,10 @@ class Invite extends Command {
     }
 
     async run (message, args) {
-        var info = new Discord.MessageEmbed()
-        .setColor(message.config.embed.color)
-        .addField(message.language.get("INVITE_FIELD"), message.language.get("INVITE"))
-        message.channel.send(info)
+        let info = new Discord.MessageEmbed()
+            .setColor(message.config.embed.color)
+            .addField(message.language.get("INVITE_TITLE"), message.language.get("INVITE_FIELD"));
+        message.channel.send(info);
     }
 }
 

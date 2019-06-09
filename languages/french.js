@@ -18,19 +18,16 @@ module.exports = class {
 			PING_EXAMPLES: (prefix) => `${prefix}ping`,
 			PING_PONG: "Pong !",	
 
-			INVITE_DESCRIPTION: "Donne l'invitation pour add le bot sur un serveur",
+			INVITE_DESCRIPTION: "Donne l'invitation pour ajouter le bot sur un serveur",
 			INVITE_USAGE: (prefix) => `${prefix}invite`,
 			INVITE_EXAMPLES: (prefix) => `${prefix}invite`,
-			INVITE_FIELD: "Invitation",
-			INVITE: "[Clique-ici](https://discordapp.com/oauth2/authorize?client_id=390231727554953216&scope=bot&permissions=66321471) pour inviter le bot sur ton serveur discord.",
+			INVITE_TITLE: "Invitation",
+			INVITE_FIELD: "[Clique-ici](https://discordapp.com/oauth2/authorize?client_id=390231727554953216&scope=bot&permissions=66321471) pour inviter le bot sur ton serveur discord.",
 			
 			AVATAR_DESCRIPTION: "Donne l'avatar de l'utilisateur demandé",
-			AVATAR_USAGE: (prefix) => `${prefix}avatar (@member)`,
+			AVATAR_USAGE: (prefix) => `${prefix}avatar (@utilisateur)`,
 			AVATAR_EXAMPLES: (prefix) => `${prefix}avatar @Denver`,
 			AVATAR_TITLE: "Avatar de"
-			
-
-
 
         };
     }
