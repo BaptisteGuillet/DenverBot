@@ -14,6 +14,7 @@ module.exports = class {
 
         let client = this.client;
         message.config = client.config;
+        message.tclient = client;
 
         // Gets settings
         let settings = await client.functions.getSettings(client, message.channel);
