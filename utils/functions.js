@@ -53,5 +53,27 @@ module.exports = {
         } else {
             return true;
         }
+    },
+
+    /**
+     * Fetch user mentionned in the message
+     * @param {object} message The discord message
+     * @returns The user
+     */
+    async fetchUser(message, args){
+        return new Promise(async function(resolve, reject){
+            let users = message.mentions.users;
+            if(users.first()){
+                resolve(users.first());
+            } else {
+                if(args[0]){
+                    let user = await message.client.users.fetch(args[0]).catch((err) => {
+                        reject();
+                    }).then((user) => {
+                        resolve(user);
+                    });
+                }
+            }
+        });
     }
 };
