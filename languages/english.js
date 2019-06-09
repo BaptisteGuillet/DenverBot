@@ -18,6 +18,8 @@ module.exports = class {
 			ERROR_DISABLED_CONTENT: "This command is temporarily disabled, only administrators currently have access to it.",
 			ERROR_EVERYONE_TITLE: `${e.error} Security`,
 			ERROR_EVERYONE_CONTENT: "We have detected an @everyone mention in your message, but you do not have permission to mention @everyone in the commands.",
+			ERROR_BOTPERMISSIONS_TITLE: `${e.error} Missing permissions`,
+			ERROR_BOTPERMISSIONS_CONTENT: (perm) => `The following permissions are required for this command to work properly: ${perm}`,
 
 			PING_DESCRIPTION: "Just answer pong",
 			PING_USAGE: (prefix) => `${prefix}ping`,

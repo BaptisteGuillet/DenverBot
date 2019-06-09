@@ -52,9 +52,22 @@ module.exports = class {
         if(cmd.guildOnly && message.guild){
             return message.channel.send(language.get("ERROR_COMMAND_GUILDONLY"));
         }
-        
+
+        var neededPermission = [];
+        if(!cmd.conf.botPermissions.includes("EMBED_LINKS")){
+            cmd.conf.botPermissions.push("EMBED_LINKS");
+        }
+        cmd.conf.botPermissions.forEach((perm) => {
+            if(!message.channel.permissionsFor(message.guild.me).has(perm)){
+                neededPermission.push(perm);
+            }
+        });
+        if(neededPermission.length > 0){
+            return client.errors.botPermissions(neededPermission.map((p) => `\`${p}\``).join(", "), message);
+        }
+
         if(message.guild && !message.member.hasPermission("MENTION_EVERYONE") && message.mentions.everyone){
-            return everyone(message);
+            return client.errors.everyone(message);
         }
 
         if(permLevel < client.levelCache[cmd.conf.permLevel]) {

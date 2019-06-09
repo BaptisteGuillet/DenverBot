@@ -54,5 +54,14 @@ module.exports = {
             .setColor("#FF0000")
             .setFooter(message.config.embed.footer);
         message.channel.send(embed);
+    },
+
+    /**
+     * Send an error message if the bot doesn't have the permission
+     * @param {string} permissions Needed permissions
+     * @param {object} message The discord message
+     */
+    botPermissions(permissions, message){
+        message.channel.send(`__**${message.language.get("ERROR_BOTPERMISSIONS_TITLE")}**__\n\n${message.language.get("ERROR_BOTPERMISSIONS_CONTENT", permissions)}`);
     }
 };

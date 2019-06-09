@@ -18,6 +18,8 @@ module.exports = class {
 			ERROR_DISABLED_CONTENT: "Cette commande est temporairement désactivée, seuls les administrateurs y ont actuellement accès.",
 			ERROR_EVERYONE_TITLE: `${e.error} Sécurité`,
 			ERROR_EVERYONE_CONTENT: "Nous avons détecté une mention @everyone dans votre message, mais vous n'avez pas la permission de mentionner @everyone dans les commandes.",
+			ERROR_BOTPERMISSIONS_TITLE: `${e.error} Permissions manquantes`,
+			ERROR_BOTPERMISSIONS_CONTENT: (perm) => `Les permissions suivantes sont requises pour le bon fonctionnement de cette commande : ${perm}`,
 
 			PING_DESCRIPTION: "Répond juste pong",
 			PING_USAGE: (prefix) => `${prefix}ping`,
