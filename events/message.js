@@ -53,17 +53,19 @@ module.exports = class {
             return message.channel.send(language.get("ERROR_COMMAND_GUILDONLY"));
         }
 
-        var neededPermission = [];
-        if(!cmd.conf.botPermissions.includes("EMBED_LINKS")){
-            cmd.conf.botPermissions.push("EMBED_LINKS");
-        }
-        cmd.conf.botPermissions.forEach((perm) => {
-            if(!message.channel.permissionsFor(message.guild.me).has(perm)){
-                neededPermission.push(perm);
+        if(message.guild){
+            var neededPermission = [];
+            if(!cmd.conf.botPermissions.includes("EMBED_LINKS")){
+                cmd.conf.botPermissions.push("EMBED_LINKS");
             }
-        });
-        if(neededPermission.length > 0){
-            return client.errors.botPermissions(neededPermission.map((p) => `\`${p}\``).join(", "), message);
+            cmd.conf.botPermissions.forEach((perm) => {
+                if(!message.channel.permissionsFor(message.guild.me).has(perm)){
+                    neededPermission.push(perm);
+                }
+            });
+            if(neededPermission.length > 0){
+                return client.errors.botPermissions(neededPermission.map((p) => `\`${p}\``).join(", "), message);
+            }
         }
 
         if(message.guild && !message.member.hasPermission("MENTION_EVERYONE") && message.mentions.everyone){
