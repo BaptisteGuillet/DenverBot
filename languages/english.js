@@ -49,7 +49,18 @@ module.exports = class {
 				"Examples",
 				"Required level"
 			],
-			HELP_TIMEOUT: "The message has expired, type the command again!"
+			HELP_TIMEOUT: "The message has expired, type the command again!",
+
+			USERINFO_DESCRIPTION: "Affiche les informations des utilisateurs",
+      USERINFO_USAGE: (prefix) => `${prefix}userinfo (@utilisateur)`,
+      USERINFO_EXAMPLES: (prefix) => `${prefix}userinfo @Denver`,
+      USERINFO_TITLES: [
+          "Nom",
+          "Joue actuellement",
+          "ID",
+          "Statut",
+          "Roles"
+      ],
 
         };
     }
