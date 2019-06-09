@@ -15,7 +15,9 @@ class Invite extends Command {
                 "invit"
             ],
             permLevel: "User",
-            botPermissions: [],
+            botPermissions: [
+                "EMBED_LINKS"
+            ],
             nsfw: false,
             adminOnly: false,
             cooldown: 1000

@@ -12,7 +12,9 @@ class Avatar extends Command {
             enabled: true,
             guildOnly: false,
             permLevel: "User",
-            botPermissions: [],
+            botPermissions: [
+                "EMBED_LINKS"
+            ],
             nsfw: false,
             adminOnly: false,
             cooldown: 1000
