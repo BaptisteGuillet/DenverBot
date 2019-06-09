@@ -1,8 +1,8 @@
 # DenverBot
 
-Denver est un bot multifonctions utilisé par plus de 1,900 serveurs Discord !
+Denver is a multi-functional bot used by more than 1900 Discord servers!
 
-## Fonctionnalités
+## Features
 
 <a href="https://nodejs.org/">
     <image src="https://img.shields.io/badge/node--js-v10.16.0-brightgreen.svg?logo=node.js&longCache=true&style=flat-square">
@@ -23,26 +23,26 @@ Denver est un bot multifonctions utilisé par plus de 1,900 serveurs Discord !
   <img src="https://discordbots.org/api/widget/status/390231727554953216.svg"/>
 </a>
 
-## Commandes
+## Commands
 
-Voici la liste des commandes proposées par Denver :
+Here is the list of commands proposed by Denver:
 
-| Commande | Description                                      | Permissions |
+| Commands | Description                                      | Permissions |
 |----------|--------------------------------------------------|-------------|
-| ping     | Répond pong                                      | User        |
-| help     | Affiche les commandes                            | User        |
-| invite   | Affiche le lien d'invitation pour ajouter Denver | User        |
+| ping     | Answers pong                                     | User        |
+| help     | Displays command                                 | User        |
+| invite   | Displays the invitation link to add Denver       | User        |
 
-## Fonctionnalités à venir
+## Upcoming features
 
-Les fonctionnalités à venir apparaîtront ici !
+The upcoming features will appear here!
 
-## Ajouter Denver
+## Add Denver
 
-Pour ajouter Denver sur votre serveur, cliquez simplement [ici](https://discordapp.com/oauth2/authorize?client_id=390231727554953216&permissions=2146958847&scope=bot) !  
-Si vous voulez utilisez des permissions différentes, cliquez [ici](https://finitereality.github.io/permissions-calculator/?v=0).
+To add Denver to your server, simply click [here](https://discordapp.com/oauth2/authorize?client_id=390231727554953216&permissions=2146958847&scope=bot)!  
+If you want to use different permissions, click [here](https://finitereality.github.io/permissions-calculator/?v=0).
 
 ## Support
 
-Vous avez besoin d'aide ? Rejoignez notre serveur Discord, notre équipe répondra à toutes vos questions !  
-[Rejoindre le Discord](https://discordapp.com/invite/RHdkSwH)
+Do you need help? Join our Discord server, our team will answer all your questions!
+[Join the Discord](https://discordapp.com/invite/RHdkSwH)
