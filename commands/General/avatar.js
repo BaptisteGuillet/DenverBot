@@ -21,7 +21,7 @@ class Avatar extends Command {
 
     async run (message, args) {
 
-        let user = await message.tclient.functions.fetchUser(message, args) || message.author;
+        let user = await message.tclient.functions.fetchUser(message, args) || message.author;
         
         let embed = new Discord.MessageEmbed()
             .setAuthor(`${message.language.get("AVATAR_TITLE")} ${user.username}:`)

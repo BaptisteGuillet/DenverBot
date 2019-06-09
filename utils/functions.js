@@ -68,10 +68,12 @@ module.exports = {
             } else {
                 if(args[0]){
                     let user = await message.client.users.fetch(args[0]).catch((err) => {
-                        reject();
+                        resolve(false);
                     }).then((user) => {
                         resolve(user);
                     });
+                } else {
+                    resolve(false);
                 }
             }
         });
