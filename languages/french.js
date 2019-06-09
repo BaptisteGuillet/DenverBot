@@ -14,6 +14,8 @@ module.exports = class {
 			ERROR_COMMAND_GUILDONLY: `${e.error} | Cette commande est indisponible en messages privés !`,
 			ERROR_NSFW_TITLE: `${e.nsfw} Commande NSFW`,
 			ERROR_NSFW_CONTENT: "Cette commande doit être executée dans un salon NSFW (+18 ans)",
+			ERROR_DISABLED_TITLE: `${e.error} Commande désactivée`,
+			ERROR_DISABLED_CONTENT: "Cette commande est temporairement désactivée, seuls les administrateurs y ont actuellement accès.",
 
 			PING_DESCRIPTION: "Répond juste pong",
 			PING_USAGE: (prefix) => `${prefix}ping`,

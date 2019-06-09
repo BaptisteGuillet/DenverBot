@@ -28,5 +28,18 @@ module.exports = {
             .setColor("#FF0000")
             .setFooter(message.config.embed.footer);
         message.channel.send(embed);
+    },
+
+    /**
+     * Send an error message if the command is disabled
+     * @param {object} message The discord message
+     */
+    disabled(message){
+        let embed = new Discord.MessageEmbed()
+            .setAuthor(message.language.get("ERROR_DISABLED_TITLE"))
+            .setDescription(message.language.get("ERROR_DISABLED_CONTENT"))
+            .setColor("#FF0000")
+            .setFooter(message.config.embed.footer);
+        message.channel.send(embed);
     }
 };

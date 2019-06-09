@@ -36,7 +36,8 @@ module.exports = {
     emotes: {
         error: "❌",
         success: "✅",
-        info: "ℹ️"
+        info: "ℹ️",
+        nsfw: "🔞"
     },
     embed: {
         color: "#7289da",

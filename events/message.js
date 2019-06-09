@@ -57,6 +57,10 @@ module.exports = class {
             return client.errors.nsfw(message);
         }
 
+        if(!cmd.conf.enabled && permLevel < 4){
+            return client.errors.disabled(message);
+        }
+
         cmd.run(message, args);
 
     }
