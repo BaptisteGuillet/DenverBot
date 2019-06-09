@@ -8,6 +8,10 @@ module.exports = class {
 
     async run (message) {
 
+        if(message.author.bot){
+            return;
+        }
+        
         if(message.guild && !message.member){
             await message.guild.members.fetch(message.author.id);
         }
