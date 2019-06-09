@@ -53,6 +53,10 @@ module.exports = class {
             return client.errors.perm(client.config.permLevels.find((l) => l.level === permLevel).name, cmd.conf.permLevel, message);
         }
 
+        if(message.channel.type === "text" && !message.channel.nsfw && cmd.conf.nsfw){
+            return client.errors.nsfw(message);
+        }
+
         cmd.run(message, args);
 
     }

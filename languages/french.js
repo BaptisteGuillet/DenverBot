@@ -12,6 +12,8 @@ module.exports = class {
 			ERROR_PERMISSIONS_TITLE: `${e.error} Permissions insuffisantes`,
 			ERROR_PERMISSIONS_CONTENT: (lvl, rlvl) => `Cette commande nécessite le niveau de permission \`${rlvl}\` et vous n'avez que le niveau \`${lvl}\` !`,			
 			ERROR_COMMAND_GUILDONLY: `${e.error} | Cette commande est indisponible en messages privés !`,
+			ERROR_NSFW_TITLE: `${e.nsfw} Commande NSFW`,
+			ERROR_NSFW_CONTENT: "Cette commande doit être executée dans un salon NSFW (+18 ans)",
 
 			PING_DESCRIPTION: "Répond juste pong",
 			PING_USAGE: (prefix) => `${prefix}ping`,
