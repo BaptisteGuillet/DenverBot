@@ -35,7 +35,21 @@ module.exports = class {
 			AVATAR_DESCRIPTION: "Gives the avatar of the requested user",
 			AVATAR_USAGE: (prefix) => `${prefix}avatar (@user)`,
 			AVATAR_EXAMPLES: (prefix) => `${prefix}avatar @Denver`,
-			AVATAR_TITLE: "Avatar of"
+			AVATAR_TITLE: "Avatar of",
+
+			HELP_DESCRIPTION: "Displays the list of commands",
+			HELP_USAGE: (prefix) => `${prefix}help (command)`,
+			HELP_EXAMPLES: (prefix) => `${prefix}help\n${prefix}help ping`,
+			HELP_NOT_FOUND: (search) => `${e.error} | The command \`${search}\` doesn't exist!`,
+			HELP_TITLE: (command) => `Help : ${command}`,
+			HELP_TITLE1: (category) => `Category : ${category}`,
+			HELP_FIELDS: [
+				"Description",
+				"Usage",
+				"Examples",
+				"Required level"
+			],
+			HELP_TIMEOUT: "The message has expired, type the command again!"
 
         };
     }
