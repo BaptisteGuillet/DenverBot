@@ -41,5 +41,18 @@ module.exports = {
             .setColor("#FF0000")
             .setFooter(message.config.embed.footer);
         message.channel.send(embed);
+    },
+
+    /**
+     * Send an error message if the member doesn't have the permission to mention everyone
+     * @param {object} message The discord message
+     */
+    everyone(message){
+        let embed = new Discord.MessageEmbed()
+            .setAuthor(message.language.get("ERROR_EVERYONE_TITLE"))
+            .setDescription(message.language.get("ERROR_EVERYONE_CONTENT"))
+            .setColor("#FF0000")
+            .setFooter(message.config.embed.footer);
+        message.channel.send(embed);
     }
 };

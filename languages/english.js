@@ -16,6 +16,8 @@ module.exports = class {
 			ERROR_NSFW_CONTENT: "This command must be launched in a NSFW channel (+18)",
 			ERROR_DISABLED_TITLE: `${e.error} Command disabled`,
 			ERROR_DISABLED_CONTENT: "This command is temporarily disabled, only administrators currently have access to it.",
+			ERROR_EVERYONE_TITLE: `${e.error} Security`,
+			ERROR_EVERYONE_CONTENT: "We have detected an @everyone mention in your message, but you do not have permission to mention @everyone in the commands.",
 
 			PING_DESCRIPTION: "Just answer pong",
 			PING_USAGE: (prefix) => `${prefix}ping`,

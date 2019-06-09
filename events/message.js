@@ -52,6 +52,10 @@ module.exports = class {
         if(cmd.guildOnly && message.guild){
             return message.channel.send(language.get("ERROR_COMMAND_GUILDONLY"));
         }
+        
+        if(message.guild && !message.member.hasPermission("MENTION_EVERYONE") && message.mentions.everyone){
+            return everyone(message);
+        }
 
         if(permLevel < client.levelCache[cmd.conf.permLevel]) {
             return client.errors.perm(client.config.permLevels.find((l) => l.level === permLevel).name, cmd.conf.permLevel, message);

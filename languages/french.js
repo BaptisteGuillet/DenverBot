@@ -16,6 +16,8 @@ module.exports = class {
 			ERROR_NSFW_CONTENT: "Cette commande doit être executée dans un salon NSFW (+18 ans)",
 			ERROR_DISABLED_TITLE: `${e.error} Commande désactivée`,
 			ERROR_DISABLED_CONTENT: "Cette commande est temporairement désactivée, seuls les administrateurs y ont actuellement accès.",
+			ERROR_EVERYONE_TITLE: `${e.error} Sécurité`,
+			ERROR_EVERYONE_CONTENT: "Nous avons détecté une mention @everyone dans votre message, mais vous n'avez pas la permission de mentionner @everyone dans les commandes.",
 
 			PING_DESCRIPTION: "Répond juste pong",
 			PING_USAGE: (prefix) => `${prefix}ping`,
