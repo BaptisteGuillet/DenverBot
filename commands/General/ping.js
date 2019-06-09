@@ -14,7 +14,7 @@ class Ping extends Command {
             aliases: [
                 "pong"
             ],
-            permLevel: "Bot Admin",
+            permLevel: "User",
             botPermissions: [],
             nsfw: false,
             adminOnly: false,
