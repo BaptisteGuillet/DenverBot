@@ -49,7 +49,7 @@ module.exports = class {
             return;
         }
 
-        if(cmd.guildOnly && !message.guild){
+        if(cmd.conf.guildOnly && !message.guild){
             return message.channel.send(language.get("ERROR_COMMAND_GUILDONLY"));
         }
 
