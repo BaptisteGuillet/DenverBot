@@ -4,7 +4,7 @@ module.exports = class {
     constructor(...args) {
 		this.language = {
 
-			PREFIX_INFO: (prefix) => `${prefix.length > 0 ? `${e.info} | Mon préfixe sur ce serveur est ${prefix} !` : `${e.info} | Aucun préfixe. Tapez simplement la commande sans préfixe !`}`,			
+			PREFIX_INFO: (prefix) => `${prefix.length > 0 ? `${e.info} | Mon préfixe sur ce serveur est ${prefix} !` : `${e.info} | Aucun préfixe. Tapez simplement la commande sans préfixe !`}`,			
 			NO_DESCRIPTION_PROVIDED: "Aucune description définie",
 			NO_USAGE_PROVIDED: "Aucun usage défini",
 			NO_EXAMPLES_PROVIDED: "Aucun exemple défini",
@@ -13,7 +13,7 @@ module.exports = class {
 			ERROR_PERMISSIONS_CONTENT: (lvl, rlvl) => `Cette commande nécessite le niveau de permission \`${rlvl}\` et vous n'avez que le niveau \`${lvl}\` !`,			
 			ERROR_COMMAND_GUILDONLY: `${e.error} | Cette commande est indisponible en messages privés !`,
 			ERROR_NSFW_TITLE: `${e.nsfw} Commande NSFW`,
-			ERROR_NSFW_CONTENT: "Cette commande doit être executée dans un salon NSFW (+18 ans)",
+			ERROR_NSFW_CONTENT: "Cette commande doit être executée dans un salon NSFW (+18 ans).",
 			ERROR_DISABLED_TITLE: `${e.error} Commande désactivée`,
 			ERROR_DISABLED_CONTENT: "Cette commande est temporairement désactivée, seuls les administrateurs y ont actuellement accès.",
 			ERROR_EVERYONE_TITLE: `${e.error} Sécurité`,
@@ -34,13 +34,13 @@ module.exports = class {
 			
 			AVATAR_DESCRIPTION: "Donne l'avatar de l'utilisateur demandé",
 			AVATAR_USAGE: (prefix) => `${prefix}avatar (@utilisateur)`,
-			AVATAR_EXAMPLES: (prefix) => `${prefix}avatar @Denver`,
+			AVATAR_EXAMPLES: (prefix) => `${prefix}avatar @Denver#8124`,
 			AVATAR_TITLE: "Avatar de",
 
 			HELP_DESCRIPTION: "Affiche la liste des commandes",
 			HELP_USAGE: (prefix) => `${prefix}help (commande)`,
 			HELP_EXAMPLES: (prefix) => `${prefix}help\n${prefix}help ping`,
-			HELP_NOT_FOUND: (search) => `${e.error} | La commande \`${search}\` n'existe pas !`,
+			HELP_NOT_FOUND: (search) => `${e.error} | La commande \`${search}\` n'existe pas !`,
 			HELP_TITLE: (command) => `Aide : ${command}`,
 			HELP_TITLE1: (category) => `Catégorie : ${category}`,
 			HELP_FIELDS: [
@@ -49,14 +49,14 @@ module.exports = class {
 				"Exemples",
 				"Niveau requis"
 			],
-			HELP_TIMEOUT: "Le message a expiré, tapez de nouveau la commande !",
+			HELP_TIMEOUT: "Le menu d'aide a expiré, tapez de nouveau la commande !",
 
 			USERINFO_DESCRIPTION: "Affiche les informations des utilisateurs",
 			USERINFO_USAGE: (prefix) => `${prefix}userinfo (@utilisateur)`,
 			USERINFO_EXAMPLES: (prefix) => `${prefix}userinfo @Denver`,
 			USERINFO_TITLES: [
 				"Nom",
-				"Joue actuellement",
+				"Rich Presence",
 				"ID",
 				"Statut",
 				"Roles"
@@ -66,21 +66,20 @@ module.exports = class {
 				"Hors-ligne",
 				"Absent",
 				"Ne pas déranger",
-				"En stream"
+				"En streaming"
 			],
-			USERINFO_NOPLAY: "Aucun jeu",
+			USERINFO_NOPLAY: "Rien",
 			USERINFO_PROFIL: "Profil",
 
 			LOGSCMD_DESCRIPTION: "Commande pour configurer le salon log",
 			LOGSCMD_USAGE: (prefix) => `${prefix}logs`,
 			LOGSCMD_EXAMPLES: (prefix) => `${prefix}logs`,
-			LOGSCMD_NOCHANNEL: "Veuillez entrer un channel",
-			LOGSCMD_INVALIDCHANNEL: "Ce channel n'existe pas",
-			LOGSCMD_CHANNELSUCCES: (channel) => `Votre salon logs est désormer ${channel}`,
-			LOGSCMD_LOGSOFF: "Vous venez de désactiver les logs sur votre serveur",
-
-
-			//LOGS EVENT
+			LOGSCMD_NOCHANNEL: "Veuillez entrer un salon valide.",
+			LOGSCMD_INVALIDCHANNEL: "Le salon spécifié n'existe pas !\nVous devez mettre la mention ou l'ID.",
+			LOGSCMD_CHANNELSUCCES: (channel) => `Votre salon logs est désormais ${channel}.`,
+            LOGSCMD_LOGSOFF: "Vous venez de désactiver les logs sur votre serveur",
+            
+            //LOGS EVENT
 			MESSADEDELETE_DESC: "Message supprimé",
 			MESSADEDELETE_FIELD: [
 				"Salon",
