@@ -2,6 +2,7 @@ const { Client, Collection, MessageEmbed } = require("discord.js");
 const { promisify } = require("util"),
 fs = require("fs"),
 path = require("path"),
+giveaways = require("discord-giveaways"),
 mongoose = require("mongoose"),
 readdir = promisify(fs.readdir);
 
@@ -82,17 +83,26 @@ const init = async () => {
     // Connect to the database
     await mongoose.connect("mongodb://localhost:27017/denverbot", {
         useNewUrlParser: true
-    });
+    },(err) => {
+        if(!err){
+            client.logger.log(`MongoDB connecting`, "log")
+        }else{
+            client.logger.log(err, "error");
+        }
+    })
+  
 
     client.models = {};
     client.models.Guild = mongoose.model("guild", new mongoose.Schema({
         id: {type: String},
         language: {type: String, default: client.config.defaultLanguage},
-        prefix: {type: String, default: client.config.prefix}
+        prefix: {type: String, default: client.config.prefix},
+        logs: {type: String, default: null}
     }));
 
     client.models.User = mongoose.model("user", new mongoose.Schema({
-        id: {type: String}
+        id: {type: String},
+        afk: {type: String, default: null}
     }));
 
     // Search for all commands
@@ -141,4 +151,20 @@ client.on("disconnect", () => client.logger.log("Bot is disconnecting...", "warn
 // if there is an unhandledRejection, log them
 process.on("unhandledRejection", (err) => {
     client.logger.log("Uncaught Promise Error: "+err, "error");
+});
+
+
+//Giveawais
+client.on("ready", () => {
+    giveaways.launch(client, {
+        updateCountdownEvery: 5000,
+        botsCanWin: false,
+        ignoreIfHasPermission: [
+            "MANAGE_MESSAGES",
+            "MANAGE_GUILD",
+            "ADMINISTRATOR"
+        ],
+        embedColor: "#FF0000",
+        reaction: "🎉"
+    });
 });
