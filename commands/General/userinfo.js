@@ -31,35 +31,31 @@ class Userinfo extends Command {
 
         let user = await message.tclient.functions.fetchUser(message, args) || message.author;
         
-
-        var statut = user.presence.status
-        statut = statut.replace('online', '<:online:541159008837304340> En ligne')
-        statut = statut.replace('offline', '<:offline:541159007168102410> Hors-ligne')
-        statut = statut.replace('idle', '<:away:541159006627168277> Absent')
-        statut = statut.replace('dnd', '<:dnd:541159006941741056> Ne pas déranger')
-        statut = statut.replace('streaming', '<:streaming:541159898008911873> En stream')
+        let statut = user.presence.status;
+        statut = statut.replace('online', `<:online:541159008837304340> ${message.language.get('USERINFO_TITLES')[0]}`);
+        statut = statut.replace('offline', `<:offline:541159007168102410> ${message.language.get('USERINFO_TITLES')[1]}`);
+        statut = statut.replace('idle', `<:away:541159006627168277> ${message.language.get('USERINFO_TITLES')[2]}`);
+        statut = statut.replace('dnd', `<:dnd:541159006941741056> ${message.language.get('USERINFO_TITLES')[3]}`);
+        statut = statut.replace('streaming', `<:streaming:541159898008911873> ${message.language.get('USERINFO_TITLES')[4]}`);
       
-        try {
-          var Play = user.presence.activity.name
-        } catch {
-          var Play = "Aucun jeu."
-        }
-console.log(user.presence)
+            try{
+            let Play = user.presence.activity.name;
+            }catch{
+            let Play = `${message.language.get('USERINFO_NOPLAY')}`;
+            }
 
-            let embed = new Discord.MessageEmbed()
-            embed.setAuthor("Profil", this.client.user.avatarURL())
-            embed.setThumbnail(user.avatarURL())
-           if(user.presence.clientStatus === "null"){ embed.addField(message.language.get('USERINFO_TITLES')[0], `${user.username}#${user.discriminator}`, true)
+                let embed = new Discord.MessageEmbed()
+                embed.setAuthor(`${message.language.get('USERINFO_PROFIL')}`, this.client.user.avatarURL())
+                embed.setThumbnail(user.avatarURL())
+                if(user.presence.clientStatus === "null"){ embed.addField(message.language.get('USERINFO_TITLES')[0], `${user.username}#${user.discriminator}`, true)     
+                }else if(user.presence.clientStatus.desktop){embed.addField(message.language.get('USERINFO_TITLES')[0], `${user.username}#${user.discriminator}`, true)
+                }else if(user.presence.clientStatus.mobile){embed.addField(message.language.get('USERINFO_TITLES')[0], `${user.username}#${user.discriminator} <:phone:587242842510983188>`)}
+                embed.addField(message.language.get('USERINFO_TITLES')[1], `${Play}`, true)
+                embed.addField(message.language.get('USERINFO_TITLES')[2], `${user.id}`, true)
+                embed.addField(message.language.get('USERINFO_TITLES')[3], `${statut}`, true)
+                embed.setColor(message.config.embed.color)
             
-        }else if(user.presence.clientStatus.desktop){embed.addField(message.language.get('USERINFO_TITLES')[0], `${user.username}#${user.discriminator}`, true)
-        }else if(user.presence.clientStatus.mobile){embed.addField(message.language.get('USERINFO_TITLES')[0], `${user.username}#${user.discriminator} <:phone:587242842510983188>`)}
-
-            embed.addField(message.language.get('USERINFO_TITLES')[1], `${Play}`, true)
-            embed.addField(message.language.get('USERINFO_TITLES')[2], `${user.id}`, true)
-            embed.addField(message.language.get('USERINFO_TITLES')[3], `${statut}`, true)
-       //    .addField(message.language.get('USERINFO_TITLES')[4], roles.length ? roles.length : "Aucun rôle", true)
-            embed.setColor(message.config.embed.color)
-            message.channel.send(embed)
+                message.channel.send(embed);
 
     }
 }
