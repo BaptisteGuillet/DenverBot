@@ -2,7 +2,6 @@ const { Client, Collection, MessageEmbed } = require("discord.js");
 const { promisify } = require("util"),
 fs = require("fs"),
 path = require("path"),
-giveaways = require("discord-giveaways"),
 mongoose = require("mongoose"),
 readdir = promisify(fs.readdir);
 
@@ -153,18 +152,3 @@ process.on("unhandledRejection", (err) => {
     client.logger.log("Uncaught Promise Error: "+err, "error");
 });
 
-
-//Giveawais
-client.on("ready", () => {
-    giveaways.launch(client, {
-        updateCountdownEvery: 5000,
-        botsCanWin: false,
-        ignoreIfHasPermission: [
-            "MANAGE_MESSAGES",
-            "MANAGE_GUILD",
-            "ADMINISTRATOR"
-        ],
-        embedColor: "#FF0000",
-        reaction: "🎉"
-    });
-});
