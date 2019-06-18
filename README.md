@@ -14,7 +14,7 @@ Denver is a multi-functional bot used by more than 1900 Discord servers!
     <image src="https://img.shields.io/badge/discord.js-v12-blue.svg?logo=npm&longCache=true&style=flat-square">
 </a>
 <a href="https://discordapp.com/invite/RHdkSwH">
-    <image src="https://img.shields.io/discord/390230533218500609.svg?logo=discord&longCache=true&style=flat-square&colorB=7289DA">
+    <image src="https://discordapp.com/api/guilds/390230533218500609/embed.png">
 </a>
 <a href="https://codacy.com">
     <img src="https://api.codacy.com/project/badge/Grade/26a978c0666641639b85cc71b30b2ef3"/>
