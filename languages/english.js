@@ -51,16 +51,33 @@ module.exports = class {
 			],
 			HELP_TIMEOUT: "The message has expired, type the command again!",
 
-			USERINFO_DESCRIPTION: "Affiche les informations des utilisateurs",
-      USERINFO_USAGE: (prefix) => `${prefix}userinfo (@utilisateur)`,
-      USERINFO_EXAMPLES: (prefix) => `${prefix}userinfo @Denver`,
-      USERINFO_TITLES: [
-          "Nom",
-          "Joue actuellement",
-          "ID",
-          "Statut",
-          "Roles"
-      ],
+			USERINFO_DESCRIPTION: "Displays user information",
+			USERINFO_USAGE: (prefix) => `${prefix}userinfo (@user)`,
+			USERINFO_EXAMPLES: (prefix) => `${prefix}userinfo @Denver`,
+			USERINFO_TITLES: [
+				"Name",
+				"Currently playing",
+				"ID",
+				"Statut",
+				"Roles"
+			],
+			USERINFO_STATUT: [
+				"Online",
+				"Offline",
+				"Idle",
+				"Do Not Disturb",
+				"Streaming"
+			],
+			USERINFO_NOPLAY: "No playing",
+			USERINFO_PROFIL: "Profil",
+
+			LOGSCMD_DESCRIPTION: "Command to configure the log room",
+			LOGSCMD_USAGE: (prefix) => `${prefix}logs`,
+			LOGSCMD_EXAMPLES: (prefix) => `${prefix}logs`,
+			LOGSCMD_NOCHANNEL: "Please enter a channel",
+			LOGSCMD_INVALIDCHANNEL: "This channel does not exist",
+			LOGSCMD_CHANNELSUCCES: (channel) => `Your living room logs is distorted ${channel}`,
+			LOGSCMD_LOGSOFF: "You have just disabled the logs on your server"
 
         };
     }

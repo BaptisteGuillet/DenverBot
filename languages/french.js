@@ -52,15 +52,32 @@ module.exports = class {
 			HELP_TIMEOUT: "Le message a expiré, tapez de nouveau la commande !",
 
 			USERINFO_DESCRIPTION: "Affiche les informations des utilisateurs",
-      USERINFO_USAGE: (prefix) => `${prefix}userinfo (@utilisateur)`,
-      USERINFO_EXAMPLES: (prefix) => `${prefix}userinfo @Denver`,
-      USERINFO_TITLES: [
-          "Nom",
-          "Joue actuellement",
-          "ID",
-          "Statut",
-          "Roles"
-      ],
+			USERINFO_USAGE: (prefix) => `${prefix}userinfo (@utilisateur)`,
+			USERINFO_EXAMPLES: (prefix) => `${prefix}userinfo @Denver`,
+			USERINFO_TITLES: [
+				"Nom",
+				"Joue actuellement",
+				"ID",
+				"Statut",
+				"Roles"
+			],
+			USERINFO_STATUT: [
+				"En ligne",
+				"Hors-ligne",
+				"Absent",
+				"Ne pas déranger",
+				"En stream"
+			],
+			USERINFO_NOPLAY: "Aucun jeu",
+			USERINFO_PROFIL: "Profil",
+
+			LOGSCMD_DESCRIPTION: "Commande pour configurer le salon log",
+			LOGSCMD_USAGE: (prefix) => `${prefix}logs`,
+			LOGSCMD_EXAMPLES: (prefix) => `${prefix}logs`,
+			LOGSCMD_NOCHANNEL: "Veuillez entrer un channel",
+			LOGSCMD_INVALIDCHANNEL: "Ce channel n'existe pas",
+			LOGSCMD_CHANNELSUCCES: (channel) => `Votre salon logs est désormer ${channel}`,
+			LOGSCMD_LOGSOFF: "Vous venez de désactiver les logs sur votre serveur"
 
 
         };
