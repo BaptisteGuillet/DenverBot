@@ -77,7 +77,28 @@ module.exports = class {
 			LOGSCMD_NOCHANNEL: "Please enter a channel",
 			LOGSCMD_INVALIDCHANNEL: "This channel does not exist",
 			LOGSCMD_CHANNELSUCCES: (channel) => `Your living room logs is distorted ${channel}`,
-			LOGSCMD_LOGSOFF: "You have just disabled the logs on your server"
+			LOGSCMD_LOGSOFF: "You have just disabled the logs on your server",
+
+			//LOGS EVENT
+			MESSADEDELETE_DESC: "Message delete",
+			MESSADEDELETE_FIELD: [
+				"Channel",
+				"Content",
+				"ID",
+				"User",
+				"Message",
+			],
+
+			MESSAGEUPDATE_DESC: "Message updated",
+			MESSAGEUPDATE_FIELD: [
+				"Channel",
+				"Go to message",
+				"Now",
+				"New",
+				"ID",
+				"User",
+				"Message",
+			],
 
         };
     }

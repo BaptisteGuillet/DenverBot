@@ -77,7 +77,29 @@ module.exports = class {
 			LOGSCMD_NOCHANNEL: "Veuillez entrer un channel",
 			LOGSCMD_INVALIDCHANNEL: "Ce channel n'existe pas",
 			LOGSCMD_CHANNELSUCCES: (channel) => `Votre salon logs est désormer ${channel}`,
-			LOGSCMD_LOGSOFF: "Vous venez de désactiver les logs sur votre serveur"
+			LOGSCMD_LOGSOFF: "Vous venez de désactiver les logs sur votre serveur",
+
+
+			//LOGS EVENT
+			MESSADEDELETE_DESC: "Message supprimé",
+			MESSADEDELETE_FIELD: [
+				"Salon",
+				"Contenu",
+				"ID",
+				"Utilisateur",
+				"Message",
+			],
+
+			MESSAGEUPDATE_DESC: "Message édité",
+			MESSAGEUPDATE_FIELD: [
+				"Salon",
+				"Aller au message",
+				"Avant",
+				"Maintenant",
+				"ID",
+				"Utilisateur",
+				"Message",
+			],
 
 
         };
