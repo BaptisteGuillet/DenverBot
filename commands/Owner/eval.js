@@ -36,28 +36,19 @@ class Eval extends Command {
                          
                     str = `${str.replace(new RegExp(`${this.client.token}|${process.env.TOKEN}`, "g"), "nop?")}`;
                         
-                        if(str.length > 1800) {
-                            str = str.substr(0, 1800)
+                        if(str.length > 1900) {
+                            str = str.substr(0, 1900)
                             str = str + "..."
                         }
 
-                        message.react("✅");     
-            
-                        let embedEvalgood =  new Discord.MessageEmbed()
-                        .setColor("01FE3C")
-                        .addField("Eval :" , "\`\`\`' + str + '\`\`\`")       
-                        message.channel.send(embedEvalgood)
+                        message.react("✅");            
+                        message.channel.send(`\`\`\`${str}\`\`\``)
 
                 } catch (err) {
                     
                     message.react("❌");
+                    message.channel.send(`\`\`\`${err}\`\`\``)
         
-                    let embedEvalno =  new Discord.MessageEmbed()
-                    .setColor("FE0101")
-                    .addField("Error :" , "\`\`\`' + err + '\`\`\`")
-                    message.channel.send(embedEvalno)
-    
-                      
                 }
 
 
